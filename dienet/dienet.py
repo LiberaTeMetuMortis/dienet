@@ -48,7 +48,7 @@ elif giris_ekran == 4:
 
 elif giris_ekran == 5:
     url = input("Url'yi giriniz : ")
-    word_list = input("Default worldlist ? Y/n")
+    word_list = input("Default worldlist ? Y/n : ")
     if word_list == ("y"):
         subprocess.call(["gobuster","dir","-u",url,"-w","/usr/share/wordlists/dirb/common.txt"])
     else:
