@@ -1,0 +1,4 @@
+requests
+python-time
+subprocess.run
+colorama
