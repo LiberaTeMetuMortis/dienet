@@ -56,14 +56,14 @@ elif giris_ekran == 5:
         subprocess.call(["gobuster","dir","-u",url,"-w",ur_list])
 
 elif giris_ekran == 6:
-    url = input("Url'yi giriniz(https olmadan ex. dsociety.cf) : ")
+    url = input("Url'yi giriniz(https olmadan orn. dsociety.cf) : ")
     subprocess.call(["nslookup",url])
     time.sleep(3)
     ip = input("Taranicak ip'i giriniz : ")
     subprocess.call(["nmap","-A","-vv",ip])
 
 elif giris_ekran == 7:
-    url = input("Url'yi giriniz(https olmadan ex. dsociety.cf) : ")
+    url = input("Url'yi giriniz(https olmadan orn. dsociety.cf) : ")
     subprocess.call(["nslookup",url])
 
 else:
