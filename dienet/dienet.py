@@ -18,11 +18,9 @@ print(Fore.LIGHTCYAN_EX+dienet)
 giris_ekran = int(input("""                                                                                                     
 [1]Kaynak kodu getir    [2]Header Bilgi al
 
-[3]HTTP durum al        [4]encode değeri al
+[3]HTTP durum al        [4]encode degeri al
 
-[5]gobuster tarama.     [6]Nmap taramasi al.
-
-[7]Ip bilgisi al
+[5]Nmap taramasi al     [6]Ip bilgisi al
 **********************************************************
 """))
 
@@ -47,22 +45,13 @@ elif giris_ekran == 4:
     print(encode.encoding)
 
 elif giris_ekran == 5:
-    url = input("Url'yi giriniz : ")
-    word_list = input("Default worldlist ? Y/n : ")
-    if word_list == ("y"):
-        subprocess.call(["gobuster","dir","-u",url,"-w","/usr/share/wordlists/dirb/common.txt"])
-    else:
-        ur_list = input("WordList yolunu giriniz : ")
-        subprocess.call(["gobuster","dir","-u",url,"-w",ur_list])
-
-elif giris_ekran == 6:
     url = input("Url'yi giriniz(https olmadan orn. dsociety.cf) : ")
     subprocess.call(["nslookup",url])
     time.sleep(3)
     ip = input("Taranicak ip'i giriniz : ")
     subprocess.call(["nmap","-A","-vv",ip])
 
-elif giris_ekran == 7:
+elif giris_ekran == 6:
     url = input("Url'yi giriniz(https olmadan orn. dsociety.cf) : ")
     subprocess.call(["nslookup",url])
 
